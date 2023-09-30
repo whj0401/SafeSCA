@@ -1,0 +1,7 @@
+.vscode
+*.pyc
+*.pkl
+*.json
+*.log
+*.txt
+data

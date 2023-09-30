@@ -1,0 +1,7 @@
+*.json
+*.pkl
+*.pyc
+*.log
+screenlog.0
+logs
+__pycache__

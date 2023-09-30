@@ -1,0 +1,15 @@
+repo_date
+src_dump
+vendor
+*.pyc
+cpp.so
+logs
+*.pkl
+direct_inter_info
+inter_info
+direct_src_dump
+src_dump
+*.hidx
+vendor
+*.bk
+tmp
