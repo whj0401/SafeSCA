@@ -16,38 +16,12 @@ threshold = 0.5
 k = 10
 
 def main():
-    exe_objdump_root = '/export/d2/hwangdz/data_for_BCA_BSA/keen/multiplex/ELF-unstripped-dump'
     dump_root = f'{qconfig.dump_dir}/embed_src'
     exe_dump_root = f'{qconfig.dump_dir}/exe_info'
-    query_exe_infos = collect_query_exe_info3()
+    query_exe_infos = collect_query_exe_info2()
     jres = dict()
 
     QE = QueryEngine(qconfig.data_dir)
-    pop_repos = [
-        'petrockblog@@ControlBlockService2', # controlblock
-        'matanui159@@ReplaySorcery', # replay-sorcery
-        'yuzu-emu@@yuzu-mainline', # yuzu-cmd
-        'bytedance@@terarkdb', # db_bench
-        'marlinprotocol@@OpenWeaver', # eth_sc
-        'realnc@@dosbox-core', # dosbox-core
-        'SmartThingsCommunity@@st-device-sdk-c', # example
-        'hyrise@@hyrise', # hyriseSystemTest
-        'kvrockslabs@@kvrocks', # kvrocks
-        'nanocurrency@@nano-node', # nano_node
-        'apache@@incubator-pagespeed-mod', # pagespeed_automatic_test
-        'jupp0r@@prometheus-cpp', # prometheus_test
-        'Tencent@@tendis', # tendisplus
-        'powturbo@@TurboBench', # turbobench
-
-        # to remove later
-        'ClickHouse@@ClickHouse',
-        'ValveSoftware@@steamlink-sdk',
-        'crawl@@crawl-sdl2',
-    ]
-    # we remove those repos inadvance
-    for repo in pop_repos:
-        if repo in QE.src_db.infos:
-            QE.src_db.infos.pop(repo)
     for cg_path, finfo_path, bin_path, src_root, path_replacement in query_exe_infos:
         exe_name = os.path.basename(cg_path)
         exe_name = exe_name.replace('.pkl', '')
