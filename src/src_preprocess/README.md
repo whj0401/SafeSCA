@@ -1,5 +1,9 @@
 # How to use
 
+Due to privacy issues, we do not release our dataset at current stage.
+Interested readers can download some repositories first, and run the following scripts to build a OSS database.
+
+
 ```
 # Modifying config.py to set directories
 # `repo_src_root` is the directories for storing all repos' source code
