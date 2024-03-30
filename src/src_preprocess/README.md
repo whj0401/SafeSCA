@@ -1,6 +1,7 @@
 # How to use
 
-Due to privacy issues, we do not release our dataset at current stage.
+Since our dataset is constructed in an industrial company and it is going through internal license and review process,
+we cannot release it at current stage.
 Interested readers can download some repositories first, and run the following scripts to build a OSS database.
 
 
