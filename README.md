@@ -1,5 +1,7 @@
 The artifact of SafeSCA
 
+The customized CrypTen with DPCNN support is available at https://github.com/whj0401/CrypTen4DPCNN
+
 # To build database
 You have to download many repositories and install `ctags` first.
 
